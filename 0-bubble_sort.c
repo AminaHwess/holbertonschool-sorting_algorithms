@@ -10,29 +10,27 @@
 void bubble_sort(int *array, size_t size)
 
 {
-    size_t i;
-    int tmp;
+	size_t i;
+	int tmp;
 
-    for (i = 0; i < size; i++)
-    {
-        while (array[i] > array[i + 1] && array != NULL)
-        {
-            tmp = array[i];
-            array[i] = array[i + 1];
-            tmp = array[i + 1];
-            
-            if (tmp != array[size] && tmp != array[0])
-            {
-                printf(" ,");
-                printf("%d", tmp);
-                printf("\n");
-            }
-        }
+	for (i = 0; i < size; i++)
+	{
+		while (array[i] > array[i + 1] && array != NULL)
+		{
+			tmp = array[i];
+			array[i] = array[i + 1];
+			tmp = array[i + 1];
 
-        if (array == NULL)
+			if (tmp != array[size] && tmp != array[0])
+			{
+				print_array(array, size);
+			}
+		}
 
-        {
-            break;
-        }
-    }
+		if (array == NULL)
+
+		{
+			break;
+		}
+	}
 }
